@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kontak - Kwarran Pule</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -133,7 +133,7 @@
 
   <header class="site-header">
     <div class="logo">
-      <img src="logo-kwarran.png" alt="Logo Pramuka" />
+      <img src="img/logo-kwarran.png" alt="Logo Pramuka" />
       <h1>Kwartir Ranting Gerakan Pramuka Pule</h1>
     </div>
     <nav>
@@ -166,20 +166,20 @@
     &copy; 2025 Kwartir Ranting Gerakan Pramuka Pule. All rights reserved.
   </footer>
 
-  <script>
-    function kirimKeWA() {
-      const nama = document.querySelector('[name="nama"]').value.trim();
-      const email = document.querySelector('[name="email"]').value.trim();
-      const pesan = document.querySelector('[name="pesan"]').value.trim();
-      const nomorWA = '6282244110365'; // pakai nomor WA dengan kode negara
+<script>
+  function kirimKeWA() {
+    const nama = document.querySelector('[name="nama"]').value.trim();
+    const email = document.querySelector('[name="email"]').value.trim();
+    const pesan = document.querySelector('[name="pesan"]').value.trim();
+    const nomorWA = '6282244110365'; // ganti nomor WA dengan kode negara Indonesia
 
-      const text = `Halo, saya *${nama}* (${email}) ingin menghubungi:\n\n${pesan}`;
-      const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
+    const text = `Halo, saya *${nama}* (${email}) ingin menghubungi:\n\n${pesan}`;
+    const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
 
-      window.open(url, '_blank');
-      return false;
-    }
-  </script>
+    window.open(url, '_blank');
+    return false; // supaya form tidak reload halaman
+  }
+</script>
 
 </body>
 </html>
